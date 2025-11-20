@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../css/contract.css">
 </head>
+ 
 <body>
-    <form method="GET">
-        First Name:<input type="text" name="firstname" required><br>
-        Last Name:<input type="text" name="lasttname" required><br>
-        Email: <input type="text" name="email" required><br>
-        company:<input type="text" name="company"> <br>
-       
-       
-       Reasonal for contact: <br>
-       <input type= "radio" name="reason">project<br>
-       <input type="radio" name="reason">thesis<br>
-       <input type="radio" name="reason">job<br>
-       
-       3 services you provide: <br>
-       <input type="checkbox">web development<br>
-       <input type="checkbox">app development<br>
-       <input type="checkbox">machine learningsbr<br>
-
-       
-       Book an appoinment: <br>
-       <input type="date" name="appoinment"><br>
-       <input type="submit" value="register">
-       <input type="submit" value="reset">
-    </form>
+ 
+    <div class="form-container">
+        <h2>Contact Me</h2>
+ 
+        <form method="GET">
+ 
+            <div class="form-row">
+                <label>First Name:</label>
+                <input type="text" name="firstname" required>
+            </div>
+ 
+            <div class="form-row">
+                <label>Last Name:</label>
+                <input type="text" name="lastname" required>
+            </div>
+ 
+            <div class="form-row">
+                <label>Email:</label>
+                <input type="email" name="email" required>
+            </div>
+ 
+            <div class="form-row">
+                <label>Reason for Contact:</label>
+                <input type="radio" name="reason" value="project" required> Project
+                <input type="radio" name="reason" value="thesis"> Thesis
+                <input type="radio" name="reason" value="job"> Job
+            </div>
+ 
+            <div class="form-row">
+                <label>Service:</label>
+                <input type="checkbox" name="service" value="Excel Work"> Excel Work
+                <input type="checkbox" name="service" value="Software Engineering"> Software Engineering
+                <input type="checkbox" name="service" value="Web Design"> Web Design
+            </div>
+ 
+            <div class="form-row">
+                <label>Appointment Date:</label>
+                <input type="date" name="appointment" value="2025-11-15">
+            </div>
+ 
+            <div class="button-area">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+ 
+        </form>
+    </div>
+ 
 </body>
+ 
 </html>
+ 
 
 
 
