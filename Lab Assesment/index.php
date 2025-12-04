@@ -1,62 +1,71 @@
 <?php
-echo "<h2>PHP Basics Demonstration</h2>";
-$length = 10;
+echo"<h2>Area and Perimeter of a Rectangle</h2>";
+$length = 15;
 $width = 5;
-
-$area = $length * $width;
-$perimeter = 2 * ($length + $width);
-
-echo "Area of Rectangle = $area<br>";
-echo "Perimeter of Rectangle = $perimeter<br>";
-
-$amount = 2000;
-
-$vat = $amount * 0.15;
-
-echo "VAT = $vat<br>";
-
-$num = 17;
-
+$area =  $length * $width;
+$perimeter = 2*($length + $width);
+ 
+echo "Length:$length<br>";
+echo "Width:$width<br>";
+echo "Area of Rectangle:$area<br>";
+echo "Perimeter of Rectangle:$perimeter<br>";
+ 
+echo "<h2>VAT Calculation(15%)</h2>";
+$amount = 15000;
+$vat = 0.15*$amount;
+$total = $amount+$vat;
+ 
+echo "Amount:$amount<br>";
+echo "VAT(15%):$vat<br>";
+echo "Total Amount(with VAT):$total<br>";
+ 
+echo "<h2> Odd or Even Number check</h2>";
+$num=15;
 if($num % 2 == 0){
     echo "$num is Even";
-} else {
-    echo "$num is Odd";
-}
-
-$a = 20;
-$b = 55;
-$c = 32;
-
-if($a >= $b && $a >= $c){
-    echo "$a is the largest";
-}
-elseif($b >= $a && $b >= $c){
-    echo "$b is the largest";
 }
 else{
+    echo"$num is Odd";
+}
+ 
+echo "<h2> Largest among three numbers</h2>";
+$a = 12;
+$b = 25;
+$c = 9;
+ 
+if ($a >= $b && $a >= $c) {
+    echo "$a is the largest";
+} elseif ($b >= $a && $b >= $c) {
+    echo "$b is the largest";
+} else {
     echo "$c is the largest";
 }
-
-for($i = 10; $i <= 100; $i++){
-    if($i % 2 != 0){
+ 
+echo"<Print Odd numbers between 10 and 100</h2>";
+for ($i = 10; $i <= 100; $i++) {
+    if ($i % 2 != 0) {
         echo $i . " ";
     }
 }
-
-$arr = array(5, 12, 25, 7, 30);
-$search = 25;
+echo"<br><br>";
+ 
+ 
+echo "<Search an element in an array</h2>";
+$numbers = array(10, 25, 30, 45, 50);
+$search = 30;
 $found = false;
-
-for($i = 0; $i < count($arr); $i++){
-    if($arr[$i] == $search){
-        echo "Element $search found at index $i";
+ 
+for ($i = 0; $i < count($numbers); $i++) {
+    if ($numbers[$i] == $search) {
         $found = true;
         break;
     }
 }
-
-if(!$found){
-    echo "Element not found";
+ 
+if ($found) {
+    echo "$search found in the array<br>";
+} else {
+    echo "$search not found in the array<br>";
 }
 
 for($i = 1; $i <= 3; $i++){
